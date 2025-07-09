@@ -23,9 +23,12 @@ def daily_mean(data):
     return np.mean(data, axis=0)
 
 
-def daily_max(data):
+def daily_max(data, abs=False ):
     """Calculate the daily max of a 2D inflammation data array."""
-    return np.max(data, axis=0)
+    if ( abs ):
+        data = np.abs( data )
+
+    return  np.nanmax( data , axis=0)
 
 
 def daily_min(data):
