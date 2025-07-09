@@ -10,7 +10,7 @@ dill==0.4.0
 executing==2.2.0
 fonttools==4.58.5
 iniconfig==2.1.0
-ipython==9.4.0
+ipython
 ipython_pygments_lexers==1.1.1
 isort==6.0.1
 jedi==0.19.2
