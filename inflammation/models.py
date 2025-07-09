@@ -15,6 +15,9 @@ def load_csv(filename):
 
     :param filename: Filename of CSV to load
     """
+    print( 2+2)
+    print ("We are adding lines so that the function is more than 1 line long")
+    print (" And test coverage will give us the range of lines " )
     return np.loadtxt(fname=filename, delimiter=',')
 
 

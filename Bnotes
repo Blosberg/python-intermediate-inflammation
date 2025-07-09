@@ -1,0 +1,7 @@
+# activate your environment with:
+. venv/bin/activate
+
+# install with pip:
+python3  -m  pip  install  ipython
+
+

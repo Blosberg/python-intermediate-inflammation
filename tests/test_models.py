@@ -47,3 +47,21 @@ def test_daily_min_string():
 
     with pytest.raises(TypeError):
         error_expected = daily_min([['Hello', 'there'], ['General', 'Kenobi']])
+
+
+# This decorator "parameterize" repeatedly runs the function following it
+# with the corresponding input variables from the tuple you give it.
+@pytest.mark.parametrize(
+    "test, expected",
+    [
+        ([ [0, 0], [0, 0], [0, 0] ], [0, 0]),
+        ([ [1, 2], [3, 4], [5, 6] ], [3, 4]),
+    ])
+def test_daily_mean(test, expected):
+    """Test mean function works for array of zeroes and positive integers."""
+    npt.assert_array_equal(daily_mean(np.array(test)), np.array(expected))
+
+
+@pytest.mark.parametrize("a,b,result", [(1, 2, 3), (2, 3, 5)])
+def test_add(a, b, result):
+    assert a + b == result
